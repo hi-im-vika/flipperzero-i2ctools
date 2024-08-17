@@ -11,6 +11,7 @@ typedef struct {
     bool must_send;
     bool sended;
     bool error;
+    int bytes_to_rx;
 
     i2cScanner* scanner;
 } i2cSender;
