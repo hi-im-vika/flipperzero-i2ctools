@@ -22,7 +22,7 @@ void i2c_send(i2cSender* i2c_sender) {
 
 i2cSender* i2c_sender_alloc() {
     i2cSender* i2c_sender = malloc(sizeof(i2cSender));
-    // set default num. bytes to read to existing behaviour
+    // set default num. rx bytes to existing behaviour
     i2c_sender->bytes_to_rx = 2;
     i2c_sender->must_send = false;
     i2c_sender->sended = false;
