@@ -49,7 +49,7 @@ void draw_sender_view(Canvas* canvas, i2cSender* i2c_sender) {
         const uint8_t y_min = 25;
         uint8_t x_pos = 0;
         uint8_t y_pos = 0;
-        for(uint8_t i = 0; i < sizeof(i2c_sender->recv); i++) {
+        for(uint8_t i = 0; i < i2c_sender->bytes_to_rx; i++) {
             x_pos = x_min + (column - 1) * 35;
             if(row == 1) {
                 x_pos += 40;
