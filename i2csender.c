@@ -16,6 +16,7 @@ void i2c_send(i2cSender* i2c_sender) {
     furi_hal_i2c_release(I2C_BUS);
     i2c_sender->must_send = false;
     i2c_sender->sended = true;
+    free(rx_buf);
 }
 
 i2cSender* i2c_sender_alloc() {
