@@ -7,7 +7,7 @@
 typedef struct {
     uint8_t address_idx;
     uint8_t value;
-    uint8_t recv[2];
+    uint8_t recv[256];
     bool must_send;
     bool sended;
     bool error;
