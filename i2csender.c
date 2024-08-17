@@ -14,6 +14,7 @@ void i2c_send(i2cSender* i2c_sender) {
         sizeof(rx_buf),
         I2C_TIMEOUT);
     furi_hal_i2c_release(I2C_BUS);
+    memcpy(i2c_sender->recv, rx_buf, i2c_sender->bytes_to_rx);
     i2c_sender->must_send = false;
     i2c_sender->sended = true;
     free(rx_buf);
